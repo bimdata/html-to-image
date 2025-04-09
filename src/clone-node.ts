@@ -133,6 +133,12 @@ function cloneCSSStyle<T extends HTMLElement>(
   if (sourceStyle.cssText) {
     targetStyle.cssText = sourceStyle.cssText
     targetStyle.transformOrigin = sourceStyle.transformOrigin
+  } else if (options.includeStyleProperties) {
+    options.includeStyleProperties.forEach((prop) => {
+      // eslint-disable-next-line
+      // @ts-ignore
+      targetStyle[prop] = sourceStyle[prop]
+    })
   } else {
     getStyleProperties(options).forEach((name) => {
       let value = sourceStyle.getPropertyValue(name)
