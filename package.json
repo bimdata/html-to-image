@@ -25,7 +25,7 @@
   "scripts": {
     "lint": "eslint 'src/**/*.{js,ts}?(x)' --fix",
     "clean": "rimraf dist es lib",
-    "build:esm": "tsc --module esnext --target es2017 --outDir ./es",
+    "build:esm": "tsc --module esnext --target es2017 --outDir ./es && esbuild es/index.js --bundle --minify --format=esm --outfile=dist/html-to-image.esm.min.js",
     "build:cjs": "tsc --module commonjs --target es5 --outDir ./lib",
     "build:umd": "rollup -c --bundleConfigAsCjs",
     "build": "run-s build:esm build:cjs build:umd",
@@ -71,6 +71,7 @@
     "@types/jasmine": "^4.3.1",
     "@types/pixelmatch": "^5.2.4",
     "coveralls": "^3.1.1",
+    "esbuild": "^0.25.2",
     "eslint": "^8.22.0",
     "husky": "^8.0.1",
     "is-ci": "^3.0.1",
