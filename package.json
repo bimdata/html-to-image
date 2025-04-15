@@ -1,9 +1,9 @@
 {
   "name": "@bimdata/html-to-image",
-  "version": "1.11.13",
+  "version": "1.11.14",
   "description": "Generates an image from a DOM node using HTML5 canvas and SVG.",
   "main": "lib/index.js",
-  "module": "es/index.js",
+  "module": "dist/html-to-image.esm.min.js",
   "unpkg": "dist/html-to-image.js",
   "types": "lib/index.d.ts",
   "files": [
