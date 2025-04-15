@@ -1,4 +1,15 @@
-<h1 align="center">html-to-image</h1>
+<h1 align="center">@bimdata/html-to-image</h1>
+
+> **Note:** this is a fork of https://github.com/bubkoo/html-to-image
+
+### Changelog
+
+- Modify `cloneCSSStyle()` function to improve perf when `includeStyleProperties` option is provided
+  - https://github.com/bimdata/html-to-image/commit/84ba98e02e0145609a00ba6d1e0b101b878a6c37
+- Update build script to generate a minified ESM bundle
+  - https://github.com/bimdata/html-to-image/commit/616a66ab7608d3e16b620f35d3a3343225082b5f
+
+<hr/>
 
 <p align="center"><strong>✂️ Generates an image from a DOM node using HTML5 canvas and SVG.</strong></p>
 
