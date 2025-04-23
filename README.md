@@ -6,8 +6,12 @@
 
 - Modify `cloneCSSStyle()` function to improve perf when `includeStyleProperties` option is provided
   - https://github.com/bimdata/html-to-image/commit/84ba98e02e0145609a00ba6d1e0b101b878a6c37
-- Update build script to generate a minified ESM bundle
+- Update **build** script to generate a minified ESM bundle
   - https://github.com/bimdata/html-to-image/commit/616a66ab7608d3e16b620f35d3a3343225082b5f
+- Fix `getFontEmbedCSS()`: avoid TypeError when rule.style.fontFamily is undefined
+  - https://github.com/bimdata/html-to-image/commit/bdd48bc244008fb7a44dd33b3589b493c71cf808
+- Add **prepublishOnly** script to build package before publishing
+  - https://github.com/bimdata/html-to-image/commit/bcdd455e5b6194171457d143d521798f17079caa
 
 <hr/>
 
