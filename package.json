@@ -1,6 +1,6 @@
 {
   "name": "@bimdata/html-to-image",
-  "version": "1.11.15",
+  "version": "1.11.16",
   "description": "Generates an image from a DOM node using HTML5 canvas and SVG.",
   "main": "lib/index.js",
   "module": "dist/html-to-image.esm.min.js",
@@ -30,6 +30,7 @@
     "build:umd": "rollup -c --bundleConfigAsCjs",
     "build": "run-s build:esm build:cjs build:umd",
     "prebuild": "run-s lint clean",
+    "prepublishOnly": "run-s build",
     "test": "karma start",
     "test:watch": "karma start --single-run=false --auto-watch",
     "test:debug": "karma start --browsers=Chrome --single-run=false --auto-watch --debug",
